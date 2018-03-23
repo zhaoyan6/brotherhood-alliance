@@ -13,8 +13,8 @@ watch:自动编译
 profile：输出性能数据，可以看到每一步的耗时
 
 
-xbox部署任务机器名:job.migc-game-sites_service.static_servicegroup.act_cluster.c3
-访问地址示例:http://static.g.mi.com/act/firecracker/index.html
+xbox部署任务机器名:****
+访问地址示例:****
 
 gulp webp -m  项目名 转换成webp格式的图片
 
