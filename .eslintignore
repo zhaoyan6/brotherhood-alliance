@@ -1,0 +1,14 @@
+/build/
+/config/
+/dist/
+/*.js
+/*.min.js
+/test/unit/coverage/
+/node_modules
+/deploy
+/dev
+/act
+/*.min.js
+/**/**/*.min.js
+/**/*.min.js
+*.log

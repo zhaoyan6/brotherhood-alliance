@@ -1,0 +1,21 @@
+项目名称在package.json文件中scripts中 set m='项目名'
+上传路径在webpack.config.js 中的 HttpPushWebpackPlugin方法中配置to属性
+m=模块名 npm run push  上传到测试服务器
+m=模块名 npm run dev：启动热部署 调试用
+npm run hot mac下可以直接热启动
+npm run hot-mac mac下可以直接热启动
+npm run release 发布到act文件夹下
+
+scripts:key是生命周期中的事件，value是要执行的命令。
+progress:进度条
+colors:颜色
+watch:自动编译
+profile：输出性能数据，可以看到每一步的耗时
+
+
+xbox部署任务机器名:job.migc-game-sites_service.static_servicegroup.act_cluster.c3
+访问地址示例:http://static.g.mi.com/act/firecracker/index.html
+
+gulp webp -m  项目名 转换成webp格式的图片
+
+m='项目名' npm run release //发布到指定文件夹

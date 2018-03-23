@@ -1,0 +1,64 @@
+
+@import "../../../common/sass/util.scss";
+/*下载按钮颜色、进度条等*/
+.download-btn{
+  width: 100%;
+  height:px2rem(70);
+  border-radius: px2rem(10);
+  position: relative;
+  text-align: center;
+  font-size: px2rem(30);
+  //line-height: px2rem(68);
+  color: #fff;
+  background: #f33534;
+  border-radius: px2rem(10);
+  border: solid 1px  #f33534;
+  //overflow: hidden;
+  box-sizing: border-box;
+}
+.download-btn[data-status*="installing"] {
+  background: #fcc1c2;
+  color: #f33534;
+}
+.download-btn[data-status*="paused"],
+.download-btn[data-status*="downloading"],
+.download-btn[data-status*="started"],
+.download-btn[data-status*="waiting"] {
+  background: none;
+  color: #f33534;
+}
+.download-btn .btn-txt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%,-50%);
+  z-index: 5;
+}
+.download-btn .btn-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #fcc1c2;
+  display: none;
+  z-index: 1;
+  //border-radius: px2rem(10) 0 0 px2rem(10);
+  max-width: 100%;
+}
+.download-btn[data-status*="downloading"] .btn-progress {
+  display: block;
+}
+.download-btn.canGet[data-status*="installed"]:after,
+.download-btn.canGet[data-status*="install_complete"]:after{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 15%;
+  padding-top: 15%;
+  transform: translate(50%,-50%);
+  //background-image: url(../imgs/installed-icon.png);
+  background-size: 100% 100%;
+  content: '';
+}
