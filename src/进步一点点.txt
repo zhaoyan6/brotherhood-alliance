@@ -1,0 +1,112 @@
+
+
+打印机设置
+更换电脑密码后：win键+r 输入\\printer 回车 然后输入新密码
+
+=================================
+
+webstorm安装依赖出现内存不足时，只要在settings - file typds 里的lgnorefiles and folders忽略列表里添加进node-modules即可。
+
+==================================
+
+跑项目需要m=projectName npm run hot
+        dev     文件夹是发布文件夹
+         src     是项目文件夹
+         node_modules     是项目依赖文件夹
+         deploy    部署相关文件夹
+
+===================================
+图片格式.[data-webp="0"] .slide2{
+  background: url("../images/mi-s2.jpg") no-repeat center center;
+  background-size: 100% auto;
+}
+[data-webp="1"] .slide2{
+  background: url("../webp/mi-s2.webp") no-repeat center center;
+  background-size: 100% auto;
+}
+
+======================================
+
+对付小图标+汉字的布局，不如直接将图片设置成父元素的背景图。再用padding-left等空出图标的位置~
+
+
+vue1.0中，v-for可以直接使用关键字$index得到索引。但2.0中需要（item,index）传入。
+
+========================================
+
+vue1.0组件中，在 props 中用camelCase声明的字段要转换成kebab-case的方式才会生效。
+
+jsbrige请求
+
+地址里的就是地址的一部分    
+？后面的才是参数。
+
+
+vue1.0  events->  $(e.target)指向当前dom元素的jquery对象。
+
+mi.util.getQueryVal（' name'）//获取地址栏参数的已封装函数。
+
+
+=====================================
+
+css超出部分显示省略号：
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+强制不换行，超出显示省略号
+       white-space:nowrap;
+        text-overflow:ellipsis;
+        overflow:hidden;
+
+=====================================
+
+   transfame会导致渲染机制阻塞，低版本手机容易出现数据不更新的偶发性BUG。布局时尽量不用。jxs2Review遇见
+
+=====================================
+
+下载按钮的进度条经常使得overflow+border-rideus属性不能隐藏圆角。此时在父元素加一下句子
+-webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
+
+=====================================
+
+H5移动端IOS音频自动播放解决：
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script> 
+<script type="text/javascript">
+    document.addEventListener("WeixinJSBridgeReady", function () { 
+        document.getElementById('mp3Btn').play(); 
+        // document.getElementById('video').play(); 
+    }, false);
+</script>
+
+======================================
+
+ios滑动不平滑，可在滚动dom添加css：
+
+-webkit-overflow-scrolling: touch;
+
+======================================
+
+模拟虚线，实现可调节虚线间距效果。
+width: 100%;
+height: 1px;
+background-image: linear-gradient(to right, #ccc 0%, #ccc 50%, transparent 50%);
+background-size: 8px 1px;
+background-repeat: repeat-x;
+
+======================================
+
+sentry：代码监控平台，偶发性代码报错的监控。
+
+Egret： 游戏开发引擎，可开发基于各种平台的游戏，包括H5web平台
+
+======================================
+
+
+
+
+
+
+
+

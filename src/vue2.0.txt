@@ -1,0 +1,93 @@
+ 
+Vue2.0  activitys 项目常用功能总结
+
+============================================
+引入store提示语文案：（this.$store.name 用于提取store中的数据）
+ errMsg:this.$store.getters.getErrMsg,
+
+打点：
+
+ self.$store.dispatch('sendStatistic',{fuid:'myprize'});
+
+
+提示语：
+
+ self.$store.dispatch('changeTipHint',self.errMsg.err2);
+
+奖品列表：
+
+  self.$store.commit('showPrizeList', prizeList);
+
+改变抽奖次数：
+
+  self.$store.dispatch('changeActCount', 'luck'+ self.count);
+
+
+显示中奖弹窗：
+
+   self.$store.commit('showPrizeObj', dt);
+
+页面ready时：
+
+   '$store.state.loadingFlag': function () { 
+
+ }
+
+跳转路由页面：
+
+this.$router.push('/consume')
+
+规则弹窗：
+   this.$store.commit('showRuleObj', 2);  //显示第二个规则文案
+
+游戏中心数据获取完成：
+
+'$store.state.session': function () { 
+
+ },
+
+
+============================================
+new一个小对象（子组件触发子组件方法）
+ data: {
+        eventHub: new Vue()
+    }
+
+发射端发射方法名：
+  self.$root.eventHub.$emit('pageInfo');     //触发父组件上的方法
+
+接收端，接收方法触发
+ mounted:function(){
+            var self=this;
+            self.$root.eventHub.$on('pageInfo', function (){
+                self.pageInfo();
+            } )
+        },
+
+
+============================================
+父触发子方法：
+组件上绑定ref
+<component-father ref="hot">
+
+触发setIndexData方法
+ self.$refs.hot.setIndexData(data);
+
+
+============================================
+利用vue里的Axios发送请求（已在js里赋值给$http变量）对比其他发送请求的方法:
+  self.$http.get(host.comment)
+          .then(function (article) {
+                           
+                           
+           })
+           .catch(function (response) {
+                console.log(response);
+           });
+
+游戏中心发送请求：
+   clientApi.nativeRequest({ }）
+============================================
+利用keep-alive标签缓存组件，不重复更新。
+
+<keep-alive><router-view></router-view></keep-alive>
