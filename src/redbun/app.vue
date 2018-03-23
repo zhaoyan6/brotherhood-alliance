@@ -31,7 +31,7 @@
                                      :data-receiveStatus="residueNum" :data-subActId="game.subActId"
                                      :data-gameid="game.gameId" :data-packagename="game.packageName" @click="download">
                                     <span class="btn-progress"></span>
-                                    <span class="btn-txt">下载领取</span>
+                                    <span class="btn-txt">下载领取</span>  
                                 </div>
                             </div>
                         </div>
